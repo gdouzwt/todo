@@ -9,9 +9,19 @@ export class HardcodedAuthenticationService {
   }
 
   authenticate(username, password) {
+    console.log('before ' + this.isUserLoggedIn());
     if (username === "tao" && password === "wing") {
+      sessionStorage.setItem('authenticationUser', username);
+      console.log('after ' + this.isUserLoggedIn());
+
       return true;
     }
     return false;
   }
+
+  isUserLoggedIn() {
+    let user = sessionStorage.getItem('authenticationUser');
+    return !(user === null);
+  }
+
 }
