@@ -10,7 +10,7 @@ import {WelcomeDataService} from "../service/data/welcome-data.service";
 export class WelcomeComponent implements OnInit {
 
 
-  welcomeMessageFromService:string
+  welcomeMessageFromService: string;
   name = '';
 
   //ActivatedRoute
